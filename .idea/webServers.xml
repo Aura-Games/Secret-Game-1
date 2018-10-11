@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="48dcb866-8fee-40c2-afd5-db0614eee0a3" name="lovelace.uwcs.co.uk" url="http://lovelace.uwcs.co.uk">
+        <fileTransfer host="lovelace.uwcs.co.uk" port="22" rootFolder="/compsoc/home/mtyler" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
