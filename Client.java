@@ -6,7 +6,7 @@ public class Client{
     private InputStream in;
     private OutputStream out;
     private static Client CLIENT;
-    public static final String IP = "137.205.112.71";
+    public static final String IP = "137.205.37.210";
 
     public static void main(String[] args){
         CLIENT = new Client();
@@ -22,7 +22,7 @@ public class Client{
      * @throws IOException
      */
     public void run() throws IOException{
-        connection = new Socket(IP, 4444);
+        connection = new Socket(IP, 7050);
         in = connection.getInputStream();
         out = connection.getOutputStream();
         System.out.println("Connected!");
