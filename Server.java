@@ -1,15 +1,27 @@
-import java.net.Socket;
-import java.net.ServerSocket;
-import java.io.IOException;
+import java.net.*;
+import java.io.*;
 
 public class Server {
-  public static void main(String[] args) {
-    try {
-      ServerSocket serverSocket = new ServerSocket(4444);
-      Socket clientSocket = serverSocket.accept();
-      System.out.println("Connected!")
-    } catch (IOException e) {
-      e.printStackTrace();
+    private ServerSocket connection;
+    private Socket client;
+    private static Server SERVER;
+
+    public static void main(String[] args) {
+        SERVER = new Server();
+        try {
+            SERVER.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-  }
+
+    /**
+     * Runs the server
+     * @throws IOException
+     */
+    public void run() throws IOException {
+        connection = new ServerSocket(4444);
+        client = connection.accept();
+        System.out.println("Connected!");
+    }
 }
